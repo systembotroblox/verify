@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "bufferutil": "^3.0.1",
+    "discord.js": "hydrabolt/discord.js#master",
+    "discord.js-commando": "Gawdl3y/discord.js-commando",
+    "erlpack": "hammerandchisel/erlpack",
+    "express": "^4.15.2",
+    "mz": "^2.6.0",
+    "request": "^2.81.0",
+    "request-debug": "^0.2.0",
+    "request-promise": "^4.2.0"
+  },
+  "name": "RoVer",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/evaera/RoVer",
+  "author": "evaera",
+  "license": "Apache-2.0"
+}
