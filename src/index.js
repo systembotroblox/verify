@@ -3,15 +3,8 @@
 const path = require('path')
 const Discord = require('discord.js')
 const {GlobalCache} = require('./GlobalCache')
-const config = require('./data/client.json')
 const updateServer = require('./UpdateServer.js')
-
-// Set up the sharding manager, a helper class that separates handling
-// guilds into grouped processes called Shards.
-let shardingManager = new Discord.ShardingManager(path.join(__dirname, 'Shard.js'), {
-  token: config.token,
-  totalShards: config.totalShards || 'auto'
-})
+const client = new Discord.Client();
 
 shardingManager.on('launch', shard => {
   console.log(`Launching shard ${shard.id + 1}/${shardingManager.totalShards}`)
@@ -74,3 +67,5 @@ if (config.mainLifeTime) {
  * @typedef Message
  * @see https://discord.js.org/#/docs/main/master/class/Message
  */
+
+client.login(process.env.BOT_TOKEN);
